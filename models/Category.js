@@ -15,7 +15,7 @@ Category.init(
     },
     category_name:{
       type: DataTypes.STRING,
-      allowNull: false,
+   
     },
     
   },
@@ -24,7 +24,9 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
+    //onDelete: 'SET NULL|NO ACTION',
     modelName: 'category',
+
   }
 );
 

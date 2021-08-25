@@ -40,12 +40,12 @@ router.get('/:id', (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
   Product.findOne({
-    attributes: ['id', 'product_name', 'price', 'stock'],
+    
     where:{
       id: req.params.id
     },
   
-    
+    attributes: ['id', 'product_name', 'price', 'stock'],
     include: [
       {
       model: Category,
@@ -56,8 +56,15 @@ router.get('/:id', (req, res) => {
       attributes: ['tag_name']
       }
     ]
-  })   
-   .then(dbProductData => res.json(dbProductData))
+  })  
+  .then(dbProductData => {
+  
+    if (!dbProductData) {
+    res.status(404).json({ message: 'No Product found with that ID.' });
+    return;
+    } 
+})
+    .then(dbProductData => res.json(dbProductData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -78,6 +85,7 @@ router.post('/', (req, res) => {
     product_name:req.body.product_name,
     price:req.body.price,
     stock:req.body.stock,
+    category_id:req.body.category_id,
     tagIds:req.body.tagIds,
   
   })
@@ -93,7 +101,7 @@ router.post('/', (req, res) => {
         return ProductTag.bulkCreate(productTagIdArr);
       }
       // if no product tags, just respond
-      res.status(200).json(product);
+      res.json(product);
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
     .catch((err) => {

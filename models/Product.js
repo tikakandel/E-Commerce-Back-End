@@ -40,13 +40,13 @@ Product.init(
     category_id:{
       //forigen key
       type: DataTypes.INTEGER,
-      onDelete: null,
+      //onDelete: 'SET NULL|NO ACTION',
+      
       references:{
         model: 'category',
-        key: 'id',
-       
-      
+        key:'id'
       },
+           
     },
   },
   {
