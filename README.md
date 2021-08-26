@@ -11,8 +11,8 @@
     This application is developed using, Sequalize, mySql, Express.js 
     
 ## User Story
-   AS A manager at an internet retail company, I WANT a back end for my e-commerce website that uses the latest technologies.
-   So that my company can compete with other e-commerce companies
+   AS A manager at an internet retail company, I WANT a back end for my e-commerce website that uses 
+   the latest technologies. So that my company can compete with other e-commerce companies
     
 ## Demo 
     E-commerce Back End App
@@ -29,12 +29,16 @@
     
     To install necessary dependencies, run the following command :
 
-    npm i
+    1. npm install
+    2. npm run seed
+    3. npm start
     
-    The application will be invoked with the following command: This will start localhost server on PORT 3001.
-    node server.js
     
-    Note# this app does not have frontend developed yet. Please use Insomnia to display, post, delet, or update data
+    The application will be invoked with the following command: This will start localhost server on 
+    PORT 3001.
+    
+    Note# this app does not have frontend developed yet. Please use Insomnia to display, post, delet,
+    or update data
     
 ## Contributing
     plese send pull request or simply download it from
