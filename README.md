@@ -5,12 +5,14 @@
 # E-commerce Back End
     
 ## Description
-    This is a simple E-commerce Back End application that allows users to add, view saved Product, Category and asosiated Tag id in mySql database. It also delete the data 
+    This is a simple E-commerce Back End application that allows users to add, view saved Product, 
+    Category and asosiated Tag id in mySql database. It also delete the data 
     
     This application is developed using, Sequalize, mySql, Express.js 
     
 ## User Story
-   AS A manager at an internet retail company, I WANT a back end for my e-commerce website that uses the latest technologies. So that my company can compete with other e-commerce companies
+   AS A manager at an internet retail company, I WANT a back end for my e-commerce website that uses the latest technologies.
+   So that my company can compete with other e-commerce companies
     
 ## Demo 
     E-commerce Back End App
