@@ -67,7 +67,7 @@ router.put('/:id', async(req, res) => {
     res.status(200).json(updateTag );
   }
   catch (err) {
-    res.status(500).json(err);
+    res.status(500).json("Id Not found");
   }
 });
 
